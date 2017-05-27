@@ -1,0 +1,36 @@
+
+package Practice2;
+
+public class Rectangle extends Figure {
+	
+	private final double width, length;
+	
+	public Rectangle() {
+		this(1,1);
+	}
+	 
+	public Rectangle( double width, double length) {
+		 
+		this.width= width;
+		this.length = length;
+	}
+
+	@Override
+	public double findarea() {
+		// TODO Auto-generated method stub
+		
+		return width * length;
+		
+	}
+
+	@Override
+	public double findperimeter() {
+		// TODO Auto-generated method stub
+		
+		return 2 * (width + length);
+		
+	}
+	
+	
+
+}

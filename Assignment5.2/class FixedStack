@@ -1,0 +1,57 @@
+package myPack;
+
+
+
+class FixedStack implements Stack {//public class implements Stack interface and thus implements push and void method by default
+	
+    private int stack[];
+    private int top;
+    /**
+     * constructor to create stack with size
+     * @param size
+     */
+    FixedStack(int size)
+    {
+    stack=new int[size];
+    top=-1;
+    }
+    
+    /**
+     * This method adds new entry to the top 
+     * of the stack provided its not exceeding the size b y considering the last element
+    */
+    public void push(int l)
+    {
+    if(top==stack.length-1)
+            System.out.println("Stack overflow");
+    else
+            stack[++top]=l;
+    }
+    
+    /**
+     * This method removes an entry from the 
+     * top of the stack if its below the range and prints "stack underflow" returning 0.
+     */
+    public int pop()
+    {
+    if(top<0)
+    {
+            System.out.println("stack underflow");
+            return 0;
+    }
+    else
+            return stack[top--];//if its under the range it adds it under the stack
+    }
+    public static void main(String args[]) {// creating main method with values to check in and out of range and printing messages as mentioned.
+            FixedStack mystack1=new FixedStack(5);
+            FixedStack mystack2=new FixedStack(8);
+            for(int i=0;i<6;i++) mystack1.push(i); //if its between -1 and 6 and calls push()
+            for(int i=0;i<9;i++) mystack2.push(i);//if its between -1 and 9 and calls push()
+            System.out.println("stack in mystack1");
+            for(int i=0;i<6;i++)
+            System.out.println(mystack1.pop()); //if its between -1 and 6 and calls pop()
+            System.out.println("stack in mystack2");
+            for(int i=0;i<9;i++)
+            System.out.println(mystack2.pop());//if its between -1 and 9 and calls pop()
+    }
+}	 

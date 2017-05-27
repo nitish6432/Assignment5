@@ -1,0 +1,57 @@
+package myPack;
+
+import java.util.Scanner;// importing scanner class
+
+public class MainBank {
+	
+public static void main(String[] args) {// main method
+		
+		PermanentEm p1=new PermanentEm();// creating object for PermanentEm
+		
+		//setting name and id for Permanent Employee and printing it using getter method
+		p1.setEmpName("Vijay");  
+		p1.setEmpId(2309990);
+		System.out.println("Parmenant employee name is " +p1.getEmpName());
+		System.out.println("Parmenant employee Id is " +p1.getEmpId());
+		
+		p1.print_leave_details();// calling print_leave_details method from Permanent Employee
+		p1.calculate_balance_leaves();//calling calculate_balance_leaves method from Permanent Employee
+		System.out.println("For paid leave press 'number of leave(s)' a, For sick leave press 'number of leave(s)' b, For casual leave press 'number of leave(s)' c");
+		Scanner sc=new Scanner(System.in);// creating scanner object
+		 int k=sc.nextInt();// taking leave input from employee
+		p1.avail_leave(k,  sc.next().charAt(0));//calling avail_leaves leaves method from Permanent Employee
+		
+		System.out.println("Salary of Permanent Employee is");
+		p1.calculate_salary();//calling calculate_salary leaves method from Permanent Employee
+		
+		
+		
+		
+		TemporaryEm p2=new TemporaryEm();// creating object for TemporaryEm
+		
+		//setting name and id for Permanent Employee and printing it using getter method
+		p2.setEmpName("Akram");
+		p2.setEmpId(2090991);
+		System.out.println("Temporary employee name is :" +p2.getEmpName());
+		System.out.println("Temporary employee Id is :" +p2.getEmpId());
+		
+		p2.calculate_balance_leaves();//calling calculate_balance_leaves method from Temporary Employee
+		
+		System.out.println("Leave availability for Temporary Employee");
+		System.out.println("For paid leave press 'number of leave(s)' a, For sick leave press 'number of leave(s)' b, For casual leave press 'number of leave(s)' c");
+		
+		Scanner s=new Scanner(System.in);// creating scanner object
+		 int l=s.nextInt();// taking leave input from employee
+		p2.avail_leave(l,  s.next().charAt(0));// calling avail_leave details method from Temporary Employee
+		
+		
+		System.out.println("Salary of Temporary employee is");
+		
+		p2.calculate_salary();//calling calculate_salary method from Temporary Employee
+		
+		
+	}
+}
+
+
+

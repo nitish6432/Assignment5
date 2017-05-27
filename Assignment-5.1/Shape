@@ -1,0 +1,33 @@
+package Practice2;
+
+public class Shape {
+ 
+	public static void main(String args []) {
+		
+		double width = 5, length = 7;
+		
+		Figure Rectangle = new Rectangle(width, length);
+		System.out.println("Rectangle width: " + width + " and length: " + length
+                + "\nResulting area: " + Rectangle.findarea()
+                + "\nResulting perimeter: " + Rectangle.findperimeter() + "\n");
+		
+		double radius = 5;
+		  Figure Circle = new Circle(radius);
+		  System.out.println("Circle radius: " + radius
+		            + "\nResulting Area: " + Circle.findarea()
+		            + "\nResulting Perimeter: " + Circle.findperimeter() + "\n");
+		  
+		  
+		  double a= 5, b = 3, c= 4;
+		  
+		  Figure Triangle = new Triangle (a,b,c);
+		  
+		  System.out.println("Triangle sides lengths: " + a + ", " + b + ", " + c
+	                + "\nResulting Area: " + Triangle.findarea()
+	                + "\nResulting Perimeter: " + Triangle.findperimeter() + "\n");
+		  
+		  
+
+	}
+
+}

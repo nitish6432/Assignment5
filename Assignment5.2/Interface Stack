@@ -1,0 +1,14 @@
+package myPack;// creation of package myPack
+
+public interface Stack {  // interface with mentioned methods which are abstract by default
+	
+	
+	/**
+     *  Both are abstract methods which will be implemented in later two subclasses
+     * 
+    */
+		  
+		   public void push(int I);
+		   
+		   public  int pop();
+		}

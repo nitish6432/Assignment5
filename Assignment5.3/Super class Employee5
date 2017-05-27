@@ -1,0 +1,42 @@
+package myPack;
+
+
+
+public abstract class Employee5 {//creating abstract superclass
+	
+	//char c=s.charAt(0);
+	
+	int empId;
+	String empName;
+	int basic=50000;
+  int paid_leave=12, sick_leave=12,casual_leave=12, Total_leaves= paid_leave+ sick_leave+casual_leave;// initializing variables
+
+
+	
+	double hra,pfa,tot_sal;// initializing variables
+	
+	double total_salary;// initializing variables
+	
+
+	
+	abstract void calculate_balance_leaves();	
+		
+	
+	
+	
+	abstract boolean avail_leave(int no_of_leaves,char type_of_leave);
+		
+		
+		
+		//return false;
+	
+	
+	
+	abstract void calculate_salary(); 	
+		//System.out.println("Employee salary");
+	
+		
+		
+	
+	
+}

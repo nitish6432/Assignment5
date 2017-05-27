@@ -1,0 +1,13 @@
+/abstract class shape:
+
+package Practice2;
+
+public abstract class Figure {
+	
+	public abstract double findarea();
+    public abstract double findperimeter();
+}
+	
+ 
+  
+  
